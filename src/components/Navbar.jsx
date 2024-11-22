@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-50 shadow-md">
+      <div className="fixed w-[100%] bg-black flex items-center justify-between px-4 py-2 shadow-md z-50">
         {/* Logo Section */}
         <div>
           <img src={logo} alt="arewaxtra-logo" className="h-20" />
@@ -48,8 +48,8 @@ const Navbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-yellow-500 font-bold capitalize' // Active link styling
-                  : 'text-gray-700 hover:text-yellow-500 capitalize'
+                  ? 'text-yellow-500 font-bold capitalize'
+                  : 'text-gray-200 hover:text-yellow-500 capitalize'
               }
             >
               {item.title}
@@ -59,10 +59,10 @@ const Navbar = () => {
 
         {/* Icon Section - Always Visible */}
         <div className="flex items-center gap-4">
-          <MagnifyingGlassIcon className="h-6 w-6 text-gray-700 hover:text-yellow-500 cursor-pointer" />
-          <UserIcon className="h-6 w-6 text-gray-700 hover:text-yellow-500 cursor-pointer" />
-          <HeartIcon className="h-6 w-6 text-gray-700 hover:text-yellow-500 cursor-pointer" />
-          <ShoppingBagIcon className="h-6 w-6 text-gray-700 hover:text-yellow-500 cursor-pointer" />
+          <MagnifyingGlassIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
+          <UserIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
+          <HeartIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
+          <ShoppingBagIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
         </div>
       </div>
 
@@ -80,11 +80,11 @@ const Navbar = () => {
 
       {/* Mobile Menu Slider */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 bg-gray-50 shadow-lg transform ${
+        className={`fixed top-0 right-0 h-full w-3/4 bg-gray-900 shadow-lg transform ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
-        <div className="flex flex-col p-6 gap-6">
+        <div className="mt-20 flex flex-col py-8 px-6 gap-6">
           {/* Navigation Links */}
           {navList.map((item) => (
             <NavLink
@@ -92,10 +92,10 @@ const Navbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-yellow-500 font-bold capitalize' // Active link styling
-                  : 'text-gray-700 hover:text-yellow-500 capitalize'
+                  ? 'bg-yellow-500 text-white font-bold py-3 px-4 rounded capitalize shadow-md'
+                  : 'text-gray-100 hover:text-yellow-500 capitalize py-3 px-4 rounded'
               }
-              onClick={() => setIsMenuOpen(false)} // Close menu on link click
+              onClick={() => setIsMenuOpen(false)} // Close the menu on click
             >
               {item.title}
             </NavLink>
