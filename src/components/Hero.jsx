@@ -14,7 +14,7 @@ const Hero = () => {
               ELEVATE YOUR SPIRIT WITH
             </p>
           </div>
-          <h1 className=" prata-regular text-xl sm:py-3 lg:text-4xl text-yellow-600 leading-relaxed">
+          <h1 className=" prata-regular text-xl md:text-2xl sm:py-3 lg:text-5xl text-yellow-600 leading-relaxed">
             LUXURIOUS SCENTED FRAGRANCES
           </h1>
           <div className="flex items-center gap-2">

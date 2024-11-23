@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Cta from '../components/Cta'
 
 const Home = () => {
   return (
@@ -8,8 +9,11 @@ const Home = () => {
     <div className="px-9 py-28" >
         <Hero/>
     </div>
-    <div className=" pb-8">
+    <div>
         <About/>
+    </div>
+    <div className="">
+      <Cta/> 
     </div>
     </>
   )
