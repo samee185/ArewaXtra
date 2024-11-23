@@ -1,8 +1,9 @@
 import React from 'react'
+import SignIn from './SignIn'
 
 const Shop = () => {
   return (
-    <div>Shop</div>
+    <div><SignIn/></div>
   )
 }
 
