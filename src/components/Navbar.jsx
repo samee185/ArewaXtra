@@ -48,8 +48,8 @@ const Navbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-yellow-500 font-bold capitalize'
-                  : 'text-gray-200 hover:text-yellow-500 capitalize'
+                  ? 'text-yellow-600 font-bold capitalize'
+                  : 'text-gray-200 hover:text-yellow-600 capitalize'
               }
             >
               {item.title}
@@ -59,10 +59,10 @@ const Navbar = () => {
 
         {/* Icon Section - Always Visible */}
         <div className="flex items-center gap-4">
-          <MagnifyingGlassIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
-          <UserIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
-          <HeartIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
-          <ShoppingBagIcon className="h-6 w-6 text-gray-200 hover:text-yellow-500 cursor-pointer" />
+          <MagnifyingGlassIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <UserIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <HeartIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <ShoppingBagIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
         </div>
       </div>
 
@@ -72,9 +72,9 @@ const Navbar = () => {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? (
-          <XMarkIcon className="h-10 w-10 text-gray-700 bg-gray-50 rounded-full shadow-md p-2 cursor-pointer" />
+          <XMarkIcon className="h-10 w-10 text-gray-100 bg-yellow-600 rounded-full shadow-md p-2 cursor-pointer" />
         ) : (
-          <Bars3Icon className="h-10 w-10 text-gray-700 bg-gray-50 rounded-full shadow-md p-2 cursor-pointer" />
+          <Bars3Icon className="h-10 w-10 text-gray-100 bg-yellow-600 rounded-full shadow-md p-2 cursor-pointer" />
         )}
       </div>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
-        <div className="mt-20 flex flex-col py-8 px-6 gap-6">
+        <div className="pt-32 mt-8 flex flex-col pb-8 px-6 gap-6">
           {/* Navigation Links */}
           {navList.map((item) => (
             <NavLink
@@ -92,8 +92,8 @@ const Navbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 isActive
-                  ? 'bg-yellow-500 text-white font-bold py-3 px-4 rounded capitalize shadow-md'
-                  : 'text-gray-100 hover:text-yellow-500 capitalize py-3 px-4 rounded'
+                  ? 'bg-yellow-600 text-white font-bold py-3 px-4 rounded capitalize shadow-md'
+                  : 'text-gray-100 hover:text-yellow-600 capitalize py-3 px-4 rounded'
               }
               onClick={() => setIsMenuOpen(false)} // Close the menu on click
             >

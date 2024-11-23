@@ -4,17 +4,17 @@ import heroImg from "../assets/hero-image.png"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col px-8 sm:flex-row border border-gray-200">
+    <div className="flex flex-col px-8 sm:flex-row border border-gray-100">
       {/* hero left side */}
       <div className="w-full basis-3/4 sm:w-1/2 flex items-center justify-center py-10 sm:py-0">
         <div className="">
-          <div className="flex items-center gap-2">
-            <p className="w-8 md:w-11 h-[2px] bg-yellow-500"></p>
+          <div className="flex items-center gap-2"> 
+            <p className="w-8 md:w-11 h-[2px] bg-yellow-600"></p>
             <p className="font-medium text-sm md:text-base text-white">
               ELEVATE YOUR SPIRIT WITH
             </p>
           </div>
-          <h1 className=" prata-regular text-xl sm:py-3 lg:text-4xl text-yellow-500 leading-relaxed">
+          <h1 className=" prata-regular text-xl sm:py-3 lg:text-4xl text-yellow-600 leading-relaxed">
             LUXURIOUS SCENTED FRAGRANCES
           </h1>
           <div className="flex items-center gap-2">
@@ -26,12 +26,12 @@ const Hero = () => {
                 setSubCategory([]);
               }}
             >
-              <p className="font-semibold text-sm md:text-base border border-white text-white p-2 rounded-md transition hover:bg-yellow-500 duration-700">
+              <p className="font-semibold text-sm md:text-base border border-white text-white p-2 rounded-md transition hover:bg-yellow-600 duration-700">
                 SHOP NOW
               </p>
             </Link>
 
-            <p className="w-8 md:w-11 h-[2px] bg-yellow-500"></p>
+            <p className="w-8 md:w-11 h-[2px] bg-yellow-600"></p>
           </div>
         </div>
       </div>
