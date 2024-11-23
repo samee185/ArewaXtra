@@ -49,7 +49,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? 'text-yellow-600 font-bold capitalize'
-                  : 'text-gray-200 hover:text-yellow-600 capitalize'
+                  : 'text-gray-100 hover:text-yellow-600 capitalize'
               }
             >
               {item.title}

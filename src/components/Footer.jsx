@@ -24,7 +24,7 @@ const Footer = () => {
             <li>Home</li>
             </Link>
             <Link to ={"/about"}><li>About us</li> </Link>
-            <Link to={"/collection"}>Collection</Link>
+            <Link to={"/shop"}>Shop</Link>
             <Link to={"/contact"}>Contact</Link>
             <li>Privacy policy</li>
           </ul>
@@ -41,7 +41,7 @@ const Footer = () => {
       {/* Copyright notice */}
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">
+        <p className="py-5 text-sm text-center text-white">
           copyright 2024@ Arewaxtra -All Right Reserved.
         </p>
       </div>
