@@ -36,7 +36,7 @@ const SignIn = () => {
   });
   return (
     <>
-      <div className="bg-[white] flex items-center lg:gap-10 px-4 lg:px-0 ">
+      <div className="bg-black flex items-center lg:gap-10 px-4 lg:px-0 ">
         <div className="hidden lg:block lg:basis-1/2 overflow-hidden ">
           <img src={authImg} alt="heroimage" className="object-cover" />
         </div>
@@ -50,7 +50,7 @@ const SignIn = () => {
               <Link to={"/"}>
                 <div className="flex items-center">
                   {/* <img src={logo} alt="bustixlogo" className="h-16 " /> */}
-                  <span className="ml-[-45px] mb-[-45px] text-[20px] font-semibold text-gray-800">
+                  <span className="ml-[-45px] mb-[-45px] text-2xl md:text-4xl md:font-thin text-yellow-600">
                     Login to Continue
                   </span>
                 </div>
@@ -64,14 +64,14 @@ const SignIn = () => {
                 <div>
                   <Typography
                     variant="h6"
-                    className="mb-3 text-gray-800"
+                    className="mb-3 text-gray-100"
                   >
                     Email
                   </Typography>
                   <Input
                     size="lg"
                     placeholder="name@mail.com"
-                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                    className="bg-black !border-t-gray-100 px-2 focus:!border-t-yellow-600"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
@@ -87,7 +87,7 @@ const SignIn = () => {
                 <div className="relative">
                   <Typography
                     variant="h6"
-                    className="mb-3 text-gray-800"
+                    className="mb-3 text-gray-100"
                   >
                     Password
                   </Typography>
@@ -95,7 +95,7 @@ const SignIn = () => {
                     type={`${showPassword ? "text" : "password"}`}
                     size="lg"
                     placeholder="********"
-                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                    className="bg-black !border-t-blue-gray-100 px-2 focus:!border-t-yellow-600"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
@@ -133,11 +133,11 @@ const SignIn = () => {
                 {loading ? <Spinner color="gray" /> : "Login"}
               </Button>
 
-              <p className="mt-3">
+              <p className="mt-3 text-white">
                 Don't have an account ?{" "}
-                {/* <Link to={"/signup"}>
-                  <span className="underline text-gray-800 font-bold">Register Now</span>
-                </Link>{" "} */}
+                <Link to={"/signup"}>
+                  <span className="underline text-gray-100 font-bold hover:text-yellow-600">Register Now</span>
+                </Link>{" "}
               </p>
             </form>
           </Card>

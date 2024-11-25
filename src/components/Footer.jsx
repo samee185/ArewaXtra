@@ -26,15 +26,14 @@ const Footer = () => {
             <Link to ={"/about"}><li>About us</li> </Link>
             <Link to={"/shop"}>Shop</Link>
             <Link to={"/contact"}>Contact</Link>
-            <li>Privacy policy</li>
           </ul>
         </div>
         {/* Contact information */}
         <div>
           <p className="text-xl font-medium mb-5 text-white">GET IN TOUCH</p>
           <ul className="flex flex-col gap-1 text-gray-100">
-            <li>+234-803-896-9978</li>
-            <li>trendynativewears@gmail.com</li>
+            <li>+234-802-377-6632</li>
+            <li>arewaxtra2@gmail.com</li>
           </ul>
         </div>
       </div>

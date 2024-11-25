@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {
   MagnifyingGlassIcon,
   HeartIcon,
@@ -34,11 +34,13 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-[100%] bg-black flex items-center justify-between px-4 py-2 shadow-md z-50">
+      <div className="fixed w-[100%] bg-black flex items-center justify-between px-4 py-2 shadow-md z-50 ">
         {/* Logo Section */}
+        <Link to={"/"}>
         <div>
           <img src={logo} alt="arewaxtra-logo" className="h-20" />
         </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-8">
@@ -58,11 +60,11 @@ const Navbar = () => {
         </div>
 
         {/* Icon Section - Always Visible */}
-        <div className="flex items-center gap-4">
-          <MagnifyingGlassIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
-          <UserIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
-          <HeartIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
-          <ShoppingBagIcon className="h-6 w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+        <div className="flex items-center gap-2 md:gap-4 mr-5">
+          <MagnifyingGlassIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <UserIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <HeartIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <ShoppingBagIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
         </div>
       </div>
 
@@ -80,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Slider */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 bg-gray-900 shadow-lg transform ${
+        className={`fixed top-0 right-0 h-full w-3/4 bg-black shadow-lg transform ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >

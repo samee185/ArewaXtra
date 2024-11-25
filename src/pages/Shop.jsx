@@ -3,7 +3,7 @@ import SignIn from './SignIn'
 
 const Shop = () => {
   return (
-    <div><SignIn/></div>
+    <div className='pt-28'><SignIn/></div>
   )
 }
 
