@@ -1,7 +1,6 @@
-import React from 'react'
-import About from '../components/About'
-import OurStory from '../components/OurStory'
-import OurServices from '../components/OurServices'
+import React from 'react';
+import OurStory from '../components/OurStory';
+import OurServices from '../components/OurServices';
 
 const AboutUs = () => {
   return (
