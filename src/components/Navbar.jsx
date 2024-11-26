@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import {
   MagnifyingGlassIcon,
   HeartIcon,
   UserIcon,
   ShoppingBagIcon,
   Bars3Icon,
-  XMarkIcon
+  XMarkIcon,
+  ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline'; // Import all icons together
+import { useAuth } from '../contexts/AuthContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logout, user } = useAuth();
+  const navigate = useNavigate();
 
   const navList = [
     {
@@ -27,10 +31,14 @@ const Navbar = () => {
       link: '/about',
     },
     {
-      title: 'contact',
-      link: '/contact',
+      title: 'contact us',
+      link: '/contactus',
     },
   ];
+  const handleLogout = () =>{
+    logout();
+    navigate("/")
+  }
 
   return (
     <>
@@ -62,7 +70,16 @@ const Navbar = () => {
         {/* Icon Section - Always Visible */}
         <div className="flex items-center gap-2 md:gap-4 mr-5">
           <MagnifyingGlassIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
-          <UserIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          {user ? (
+            <ArrowRightOnRectangleIcon
+              className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer"
+              onClick={handleLogout} // Handle logout action
+            />
+          ) : (
+            <Link to="/login">
+              <UserIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+            </Link>
+          )}
           <HeartIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
           <ShoppingBagIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
         </div>

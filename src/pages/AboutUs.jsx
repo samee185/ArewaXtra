@@ -1,6 +1,7 @@
 import React from 'react';
 import OurStory from '../components/OurStory';
 import OurServices from '../components/OurServices';
+import Cta from '../components/Cta';
 
 const AboutUs = () => {
   return (
@@ -10,8 +11,10 @@ const AboutUs = () => {
     </div>
     <div className="py-4">
         <OurServices />
+    </div> 
+    <div className="py-2">
+        <Cta />
     </div>
-    <hr />
     </>
   )
 }

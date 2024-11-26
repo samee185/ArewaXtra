@@ -26,7 +26,7 @@ const Hero = () => {
                 setSubCategory([]);
               }}
             >
-              <p className="font-semibold text-sm md:text-base border border-white text-white p-2 rounded-md transition hover:bg-yellow-600 duration-700">
+              <p className="font-semibold text-sm md:text-base border border-yellow-600 text-white p-2 rounded-md transition hover:bg-yellow-600 duration-700">
                 SHOP NOW
               </p>
             </Link>
