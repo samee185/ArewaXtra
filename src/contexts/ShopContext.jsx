@@ -7,14 +7,19 @@ export const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  const [loading, setLoading] = useState(false );
 
   // Fetch all products
   const fetchProducts = async () => {
+    setLoading(true)
     try {
       const response = await axios.get('/api/products'); // Adjust the API endpoint as needed
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
+    }
+    finally{
+        setLoading(false)
     }
   };
 
@@ -76,9 +81,7 @@ export const ShopProvider = ({ children }) => {
     fetchProducts();
   }, []);
 
-  return (
-    <ShopContext.Provider
-      value={{
+  const values = {
         products,
         fetchProducts,
         getProductDetails,
@@ -89,7 +92,10 @@ export const ShopProvider = ({ children }) => {
         cart,
         wishlist,
         addToWishlist,
-      }}
+  }
+  return (
+    <ShopContext.Provider
+      value={values}
     >
       {children}
     </ShopContext.Provider>
