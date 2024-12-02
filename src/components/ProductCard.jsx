@@ -4,12 +4,12 @@ const ProductCard = ({ product }) => {
     return (
         <div className="bg-gray-800 text-white rounded-lg shadow-md p-4 w-64">
             <img
-                src={product.imageUrl}
+                src={product.images[0]}
                 alt={product.title}
                 className="h-40 w-full object-cover rounded-md"
             />
             <div className="mt-4">
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <h3 className="text-lg font-semibold">{product.title}</h3>
                 <div className="flex items-center mt-2">
                     <span className="text-yellow-400">
                         {"★".repeat(Math.floor(product.rating))}

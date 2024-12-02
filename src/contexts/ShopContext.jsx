@@ -19,11 +19,9 @@ const ShopProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await axios.get(`${apiUrl}/products`);
-      if (Array.isArray(response.data)) {
-        setProducts(response.data);
-      } else {
-        console.error('Expected an array of products');
-      }
+      setProducts(response.data.data.products)
+      console.log(response.data.data.products);
+      
     } catch (error) {
       console.error('Error fetching products:', error);
     } finally {

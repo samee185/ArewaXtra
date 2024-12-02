@@ -1,10 +1,9 @@
 import React from 'react'
-import SignIn from './SignIn'
 import AllProduct from '../components/AllProduct'
 
 const Shop = () => {
   return (
-    <div><AllProduct/></div>
+    <div className='pt-28 px-9'><AllProduct/></div>
   )
 }
 
