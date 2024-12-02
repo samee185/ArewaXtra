@@ -31,12 +31,10 @@ const ShopProvider = ({ children }) => {
     }
   };
   
-  // Get product details by ID
   const getProductDetails = (id) => {
     return products.find((product) => product.id === id);
   };
 
-  // Add product to cart
   const addToCart = (productId, quantity = 1) => {
     const product = products.find((p) => p.id === productId);
     if (!product) return;
@@ -51,7 +49,6 @@ const ShopProvider = ({ children }) => {
             : item
         );
       } else {
-        // Add new product to cart
         return [...prevCart, { ...product, quantity }];
       }
     });
