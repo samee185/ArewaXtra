@@ -1,28 +1,36 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
-export const ShopContext = createContext();
+const ShopContext = createContext();
 
-export const ShopProvider = ({ children }) => {
+export const useShop = () => {
+  return useContext(ShopContext);
+};
+
+const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
   const [loading, setLoading] = useState(false );
+  const apiUrl = import.meta.env.VITE_API_URL;
 
-  // Fetch all products
+
   const fetchProducts = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const response = await axios.get('/api/products'); // Adjust the API endpoint as needed
-      setProducts(response.data);
+      const response = await axios.get(`${apiUrl}/products`);
+      if (Array.isArray(response.data)) {
+        setProducts(response.data);
+      } else {
+        console.error('Expected an array of products');
+      }
     } catch (error) {
       console.error('Error fetching products:', error);
-    }
-    finally{
-        setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
-
+  
   // Get product details by ID
   const getProductDetails = (id) => {
     return products.find((product) => product.id === id);
@@ -101,3 +109,5 @@ export const ShopProvider = ({ children }) => {
     </ShopContext.Provider>
   );
 };
+
+export default ShopProvider;

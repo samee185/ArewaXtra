@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp'
 import AboutUs from './pages/AboutUs'
 import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
+import ShopProvider from './contexts/ShopContext'
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
     <Router>
       <ScrollToTop/>
       <AuthProvider>
+        <ShopProvider>
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>} />
@@ -27,6 +29,7 @@ const App = () => {
           <Route path='/contactus' element={<Contact/>} />
         </Routes>
         <Footer />
+        </ShopProvider>
       </AuthProvider>
     </Router>
     </div>

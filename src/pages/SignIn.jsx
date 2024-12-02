@@ -36,7 +36,7 @@ const SignIn = () => {
   });
   return (
     <>
-      <div className="bg-black flex items-center lg:gap-10 px-4 lg:px-0 ">
+      <div className="bg-black flex items-center lg:gap-10 px-4 lg:px-0 pt-28 ">
         <div className="hidden lg:block lg:basis-1/2 overflow-hidden ">
           <img src={authImg} alt="heroimage" className="object-cover" />
         </div>

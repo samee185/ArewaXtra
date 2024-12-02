@@ -1,9 +1,10 @@
 import React from 'react'
 import SignIn from './SignIn'
+import AllProduct from '../components/AllProduct'
 
 const Shop = () => {
   return (
-    <div className='pt-28'><SignIn/></div>
+    <div><AllProduct/></div>
   )
 }
 
