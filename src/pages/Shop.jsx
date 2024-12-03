@@ -9,8 +9,8 @@ const Shop = () => {
       <p className="text-center text-3xl md:text-4xl text-yellow-600 mb-1">
         Our Collection
       </p>
-      <p className="text-center text-white text-md mb-12 ">
-        Explore our breath taking collection of luxurious fragrances
+      <p className="text-center text-white text-md mb-12 capitalize">
+        Explore our breath taking collection of luxurious fragrances!
       </p>
 
       <AllProduct/>
