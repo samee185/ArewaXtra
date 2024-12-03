@@ -37,7 +37,7 @@ const Product = () => {
       {/* Back to Collection Button */}
       <div className="mt-5 mb-5">
         <Link
-          to="/collection"
+          to="/shop"
           className="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-gray-300"
         >
           &larr; Back to Collection

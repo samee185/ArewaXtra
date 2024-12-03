@@ -11,10 +11,12 @@ import {
   ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline'; // Import all icons together
 import { useAuth } from '../contexts/AuthContext';
+import { useShop } from '../contexts/ShopContext'; // Import useShop context
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { logout, user } = useAuth();
+  const { getCartCount } = useShop(); // Get cart count from ShopContext
   const navigate = useNavigate();
 
   const navList = [
@@ -35,19 +37,22 @@ const Navbar = () => {
       link: '/contactus',
     },
   ];
-  const handleLogout = () =>{
+
+  const handleLogout = () => {
     logout();
-    navigate("/")
-  }
+    navigate('/');
+  };
+
+  const cartCount = getCartCount(); // Get the cart count
 
   return (
     <>
-      <div className="fixed w-[100%] bg-black flex items-center justify-between px-4 py-2 shadow-md z-50 ">
+      <div className="fixed w-[100%] bg-black flex items-center justify-between px-4 py-2 shadow-md z-50">
         {/* Logo Section */}
         <Link to={"/"}>
-        <div>
-          <img src={logo} alt="arewaxtra-logo" className="h-20" />
-        </div>
+          <div>
+            <img src={logo} alt="arewaxtra-logo" className="h-20" />
+          </div>
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -81,7 +86,16 @@ const Navbar = () => {
             </Link>
           )}
           <HeartIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
-          <ShoppingBagIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+
+          {/* Cart Icon with Badge */}
+          <Link to="/cart" className="relative">
+            <ShoppingBagIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+            {cartCount > 0 && (
+              <span className="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </Link>
         </div>
       </div>
 

@@ -12,8 +12,9 @@ import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import ShopProvider from './contexts/ShopContext'
 import Products from './components/Products'
-import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
+
 const App = () => {
   document.title = "Arewaxtra-Online Store"
   return (

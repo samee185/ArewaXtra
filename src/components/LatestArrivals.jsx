@@ -25,7 +25,7 @@ const LatestArrivals = () => {
         <div className="flex items-center justify-center gap-3 md:gap-6 flex-wrap pb-12">
             
         {latestProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product._id} product={product} />
         ))}
         </div>
     </>
