@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Cta from '../components/Cta'
 import LatestArrivals from '../components/LatestArrivals'
+import OurCollections from '../components/OurCollections'
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
       </div>
       <div>
         <LatestArrivals />
+      </div>
+      <div>
+        <OurCollections/>
       </div>
       <div className="">
         <Cta/> 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="bg-black border border-yellow-600 text-white rounded-lg shadow-md px-4 py-3 w-36 md:w-64">
+        <div className="bg-[rgb(26,26,26)] text-white rounded-lg shadow-md px-4 py-3 w-36 md:w-64">
             <img
                 src={product.images[0]}
                 alt={product.title}

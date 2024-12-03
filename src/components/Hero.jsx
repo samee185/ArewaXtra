@@ -5,7 +5,6 @@ import heroImg from "../assets/hero-image.png"
 const Hero = () => {
   return (
     <div className="flex flex-col px-8 sm:flex-row border border-yellow-600">
-      {/* hero left side */}
       <div className="w-full basis-3/4 sm:w-1/2 flex items-center justify-center py-10 sm:py-0">
         <div className="">
           <div className="flex items-center gap-2"> 
@@ -35,11 +34,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* Hero rightSide */}
       <img
         className="w-full h-[450px] sm:w-1/2 md:h-[545px]"
         src={heroImg}
-        alt=""
+        alt="hero-image"
       />
     </div>
   );
