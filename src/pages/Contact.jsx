@@ -14,7 +14,7 @@ const Contact = () => {
         />
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-xl text-yellow-600">Our Store</p>
-          <p className="text-white">Shop 23/24 Block D , Islamic SHOPPING Complex, Bashorun Winners' Road, Bashorun, Ibadan.</p>
+          <p className="text-white">Shop 23/24 Block D , Islamic Shopping Complex, Bashorun Winners' Road, Bashorun, Ibadan.</p>
           <p className="text-white">Tel: (234) 802-377 6632 <br /> Email: Arewaxtra2@gmail.com</p>
           <p className="font-semibold text-xl text-yellow-600">Careers at ------</p>
           <p className="text-white">Learn more about our teams and job openings.</p>
