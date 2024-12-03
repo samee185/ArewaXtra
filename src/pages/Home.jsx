@@ -14,7 +14,7 @@ const Home = () => {
       <div>
         <About/>
       </div>
-      <div>
+      <div className='pb-10'>
         <LatestArrivals />
       </div>
       <div>
