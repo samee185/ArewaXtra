@@ -12,6 +12,7 @@ import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import ShopProvider from './contexts/ShopContext'
 const App = () => {
+  document.title = "Arewaxtra-Online Store"
   return (
     <>
     <div className="bg-black">
