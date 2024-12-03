@@ -1,5 +1,6 @@
 import React from "react";
 import ctaImg from "../assets/cta-image.png";
+import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
@@ -15,7 +16,9 @@ const Cta = () => {
       <p className="text-sm md:text-lg capitalize pt-6 mb-6">
         discover an exquiste collection of premium perfumes <br /> at unbelievable prices during our exclusive premium sales
       </p>
-      <span className="mt-6 px-4 py-2 rounded-md bg-yellow-600 text-lg inline-block self-start">Shop Now</span>
+      <Link to={"/shop"}>
+        <span className="mt-6 px-4 py-2 rounded-md bg-yellow-600 text-lg inline-block self-start">Shop Now</span>
+      </Link>
     </div>
   );
 };
