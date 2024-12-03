@@ -51,8 +51,8 @@ const AllProduct = () => {
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
-          className={`px-4 py-2 mx-2 border rounded ${
-            currentPage === 1 ? 'cursor-not-allowed text-gray-400' : 'text-blue-500'
+          className={`px-4 py-2 mx-2 border rounded hover:bg-yellow-600 transition duration-500 ${
+            currentPage === 1 ? 'cursor-not-allowed text-gray-200' : 'text-yellow-600'
           }`}
         >
           &larr; Previous
@@ -63,8 +63,8 @@ const AllProduct = () => {
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className={`px-4 py-2 mx-2 border rounded ${
-            currentPage === totalPages ? 'cursor-not-allowed text-gray-400' : 'text-blue-500'
+          className={`px-4 py-2 mx-2 border rounded hover:bg-yellow-600 transition duration-500 ${
+            currentPage === totalPages ? 'cursor-not-allowed text-gray-200' : 'text-yellow-600'
           }`}
         >
           Next &rarr;
