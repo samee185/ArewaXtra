@@ -26,16 +26,16 @@ const RelatedProduct = ({ category, subcategory }) => {
       }
 
       // Limit to 5 related products
-      setRelated(filteredProducts.slice(0, 5));
+      setRelated(filteredProducts.slice(0, 4));
     }
   }, [products, category, subcategory]); // Include dependencies
 
   return (
     <div className="my-24">
-      <div className="text-center text-3xl py-2">
+      <div className="text-center text-3xl py-2 text-yellow-600 pb-12">
         RELATED PRODUCTS
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+      <div className="flex items-center justify-center gap-6">
         {related.length > 0 ? (
           related.map((product) => (
             <ProductCard key={product._id} product={product} />
