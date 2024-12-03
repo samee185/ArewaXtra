@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs'
 import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import ShopProvider from './contexts/ShopContext'
+import Products from './components/Products'
 const App = () => {
   document.title = "Arewaxtra-Online Store"
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/shop' element={<Shop/>} />
+          <Route path='/shop/:productId' element={<Products/>} />
           <Route path='/about' element={<AboutUs/>}/>
           <Route path='/login' element={<SignIn/>} />
           <Route path='/signup' element={<SignUp/>} />

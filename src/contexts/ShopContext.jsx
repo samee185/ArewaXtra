@@ -40,7 +40,6 @@ const ShopProvider = ({ children }) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === productId);
       if (existingProduct) {
-        // Update quantity if already in cart
         return prevCart.map((item) =>
           item.id === productId
             ? { ...item, quantity: item.quantity + quantity }
@@ -52,12 +51,10 @@ const ShopProvider = ({ children }) => {
     });
   };
 
-  // Get cart count
   const getCartCount = () => {
     return cart.reduce((count, item) => count + item.quantity, 0);
   };
 
-  // Update product quantity in cart
   const updateCartQuantity = (productId, quantity) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -66,12 +63,10 @@ const ShopProvider = ({ children }) => {
     );
   };
 
-  // Get total cart amount
   const getCartAmount = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  // Add product to wishlist
   const addToWishlist = (productId) => {
     const product = products.find((p) => p.id === productId);
     if (!product || wishlist.some((item) => item.id === productId)) return;
@@ -79,7 +74,6 @@ const ShopProvider = ({ children }) => {
     setWishlist((prevWishlist) => [...prevWishlist, product]);
   };
 
-  // Fetch products on mount
   useEffect(() => {
     fetchProducts();
   }, []);
