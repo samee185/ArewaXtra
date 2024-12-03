@@ -12,6 +12,8 @@ import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import ShopProvider from './contexts/ShopContext'
 import Products from './components/Products'
+import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer } from 'react-toastify'
 const App = () => {
   document.title = "Arewaxtra-Online Store"
   return (
@@ -22,6 +24,7 @@ const App = () => {
       <AuthProvider>
         <ShopProvider>
         <Navbar/>
+        <ToastContainer position='bottom-right' autoClose={3000} />
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/shop' element={<Shop/>} />
