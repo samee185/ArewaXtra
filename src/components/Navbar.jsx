@@ -74,24 +74,24 @@ const Navbar = () => {
 
         {/* Icon Section - Always Visible */}
         <div className="flex items-center gap-2 md:gap-4 mr-5">
-          <MagnifyingGlassIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <MagnifyingGlassIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
           {user ? (
             <ArrowRightOnRectangleIcon
-              className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer"
+              className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer"
               onClick={handleLogout} // Handle logout action
             />
           ) : (
             <Link to="/login">
-              <UserIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+              <UserIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
             </Link>
           )}
-          <HeartIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <HeartIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
 
           {/* Cart Icon with Badge */}
           <Link to="/cart" className="relative">
-            <ShoppingBagIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+            <ShoppingBagIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
             {cartCount > 0 && (
-              <span className="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                 {cartCount}
               </span>
             )}
