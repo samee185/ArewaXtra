@@ -35,7 +35,7 @@ const RelatedProduct = ({ category, subcategory }) => {
       <div className="text-center text-3xl py-2 text-yellow-600 pb-12">
         RELATED PRODUCTS
       </div>
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex items-center justify-center gap-6 flex-wrap">
         {related.length > 0 ? (
           related.map((product) => (
             <ProductCard key={product._id} product={product} />
