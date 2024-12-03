@@ -7,7 +7,7 @@ const Shop = () => {
     <>
       <div className='pt-28 px-9 pb-16'>
       <p className="text-center text-3xl md:text-4xl text-yellow-600 mb-1">
-        Our Collection
+        All Products
       </p>
       <p className="text-center text-white text-md mb-12 capitalize">
         Explore our breath taking collection of luxurious fragrances!
