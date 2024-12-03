@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const ShopContext = createContext();
 
@@ -112,7 +111,6 @@ const ShopProvider = ({ children }) => {
   return (
     <ShopContext.Provider value={values}>
       {children}
-      <ToastContainer />
     </ShopContext.Provider>
   );
 };

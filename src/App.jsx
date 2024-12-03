@@ -25,7 +25,7 @@ const App = () => {
       <AuthProvider>
         <ShopProvider>
         <Navbar/>
-        <ToastContainer position='bottom-right' autoClose={3000} />
+        <ToastContainer position='bottom-right' autoClose={2000} />
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/shop' element={<Shop/>} />
