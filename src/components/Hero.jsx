@@ -19,15 +19,15 @@ const Hero = () => {
           </h1>
           <div className="flex items-center gap-2">
             <Link
-              to="/collection"
+              to="/shop"
               onClick={() => {
                 // Optional: If you're using any global state for filters
                 setSelectedCategories([]);
                 setSubCategory([]);
               }}
             >
-              <p className="font-semibold text-sm md:text-base border border-yellow-600 text-white p-2 rounded-md transition hover:bg-yellow-600 duration-700">
-                SHOP NOW
+              <p className="text-sm md:text-base border border-yellow-600 text-white px-2 py-1 rounded-full transition hover:bg-yellow-600 duration-700">
+                Shop Now 
               </p>
             </Link>
 
