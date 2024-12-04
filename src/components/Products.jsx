@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useShop } from "../contexts/ShopContext";
 import RelatedProduct from "../components/RelatedProduct";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, loading, addToCart } = useShop();
+  const { products, loading, addToCart, addToWishlist } = useShop();
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState("");
   const [quantity, setQuantity] = useState(1); // Quantity state
@@ -86,20 +87,33 @@ const Product = () => {
           </p>
 
           {/* Quantity Controls */}
-          <div className="flex items-center mt-5 gap-4">
+          <div className="flex items-center mt-5 gap-12">
+            <div className="flex items-center gap-5 border border-yellow-600 rounded-md p-2">
             <button
               onClick={decreaseQuantity}
-              className="bg-gray-700 text-white px-4 py-2 rounded"
+              className="bg-yellow-600 text-white px-[9px] py-[2px] rounded"
             >
               -
             </button>
             <span className="text-white text-lg">{quantity}</span>
             <button
               onClick={increaseQuantity}
-              className="bg-gray-700 text-white px-4 py-2 rounded"
+              className="bg-yellow-600 text-white px-[6px] py-[2px] rounded"
             >
               +
             </button>
+            </div>
+            <div className="flex items-center gap-2 text-white">
+              <p className="text-sm">Wishlist</p>
+              <HeartIcon 
+              className="h-6 w-6 md:h-8 md:w-8 text-gray-100 hover:text-yellow-600 cursor-pointer"
+              onClick={() => {
+                console.log("Adding to wishlist:", productData._id);
+                addToWishlist(productData._id);
+              }}
+              
+               />
+            </div>
           </div>
 
           {/* Add to Cart Button */}

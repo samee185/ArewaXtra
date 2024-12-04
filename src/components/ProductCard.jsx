@@ -18,10 +18,10 @@ const ProductCard = ({ product }) => {
           </h3>
           <div className="flex items-center justify-center mt-2">
             <span className="text-yellow-400">
-              {"★".repeat(Math.floor(product.rating || 0))}
-              {"☆".repeat(5 - Math.floor(product.rating || 0))}
+              {"★".repeat(Math.floor(product.rating || 4))}
+              {"☆".repeat(2 - Math.floor(product.rating || 1))}
             </span>
-            <span className="text-sm ml-2">({product.rating?.toFixed(1) || '0.0'})</span>
+            <span className="text-sm ml-2">({product.rating?.toFixed(1) || '4.5'})</span>
           </div>
           <p className="mt-2 text-lg text-center">
             &#8358; {product.price ? product.price.toFixed(2) : '0.00'}

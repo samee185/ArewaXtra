@@ -83,10 +83,11 @@ const ShopProvider = ({ children }) => {
 
   // Add to Wishlist
   const addToWishlist = (productId) => {
-    const product = products.find((p) => p.id === productId);
-    if (!product || wishlist.some((item) => item.id === productId)) return;
+    const product = products.find((p) => p._id === productId);
+    if (!product || wishlist.some((item) => item._id === productId)) return;
 
     setWishlist((prevWishlist) => [...prevWishlist, product]);
+    toast.success(`${product.title} added to wishlist`)
   };
 
   // Initial Data Fetch

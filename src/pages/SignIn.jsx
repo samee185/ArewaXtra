@@ -71,7 +71,7 @@ const SignIn = () => {
                   <Input
                     size="lg"
                     placeholder="name@mail.com"
-                    className="bg-black !border-t-gray-100 px-2 focus:!border-t-yellow-600"
+                    className="bg-gray-200 !border-t-gray-100 px-2 focus:!border-t-yellow-600"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
@@ -95,7 +95,7 @@ const SignIn = () => {
                     type={`${showPassword ? "text" : "password"}`}
                     size="lg"
                     placeholder="********"
-                    className="bg-black !border-t-blue-gray-100 px-2 focus:!border-t-yellow-600"
+                    className="bg-gray-200 !border-t-blue-gray-100 px-2 focus:!border-t-yellow-600"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
