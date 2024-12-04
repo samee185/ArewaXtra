@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 import Wishlist from './pages/Wishlist'
 import Cart from './pages/Cart'
+import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
   document.title = "Arewaxtra-Online Store"
@@ -37,7 +38,10 @@ const App = () => {
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/contactus' element={<Contact/>} />
           <Route path='/wishlist' element={<Wishlist/>} />
-          <Route path='/cart' element={<Cart/>}/>
+          <Route element={<PrivateRoute/>}>
+            <Route path='/cart' element={<Cart/>}/>
+          </Route>
+          
         </Routes>
         <Footer />
         </ShopProvider>
