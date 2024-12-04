@@ -85,7 +85,9 @@ const Navbar = () => {
               <UserIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
             </Link>
           )}
-          <HeartIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          <Link to="/wishlist">
+            <HeartIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
+          </Link>
 
           {/* Cart Icon with Badge */}
           <Link to="/cart" className="relative">

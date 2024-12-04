@@ -90,6 +90,12 @@ const ShopProvider = ({ children }) => {
     toast.success(`${product.title} added to wishlist`)
   };
 
+  const removeFromWishlist = (productId) => {
+    setWishlist((prevWishlist) =>
+      prevWishlist.filter((item) => item._id !== productId)
+    );
+  };
+  
   // Initial Data Fetch
   useEffect(() => {
     fetchProducts();
@@ -107,6 +113,7 @@ const ShopProvider = ({ children }) => {
     cart,
     wishlist,
     addToWishlist,
+    removeFromWishlist
   };
 
   return (

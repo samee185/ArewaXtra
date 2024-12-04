@@ -14,6 +14,7 @@ import ShopProvider from './contexts/ShopContext'
 import Products from './components/Products'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import Wishlist from './pages/Wishlist'
 
 const App = () => {
   document.title = "Arewaxtra-Online Store"
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/login' element={<SignIn/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/contactus' element={<Contact/>} />
+          <Route path='/wishlist' element={<Wishlist/>} />
         </Routes>
         <Footer />
         </ShopProvider>
