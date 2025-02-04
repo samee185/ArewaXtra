@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link to={`/shop/${product._id}`}>
-      <div className="bg-[rgb(26,26,26)] text-white rounded-lg shadow-md px-4 py-3 w-36 md:w-64">
+      <div className="bg-[rgb(26,26,26)] text-white rounded-lg shadow-md px-4 py-3 w-[135px] md:w-64">
         <img
           src={product.images?.[0] || '/placeholder-image.jpg'} // Fallback for missing image
           alt={product.title || 'Product'}

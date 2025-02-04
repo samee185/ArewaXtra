@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useShop } from '../contexts/ShopContext'; // Assuming your ShopContext is properly set up
+import { useShop } from '../contexts/ShopContext';``
 import ProductCard from './ProductCard';
 
 const LatestArrivals = () => {
@@ -11,7 +11,7 @@ const LatestArrivals = () => {
     }
   }, [products, fetchProducts]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='text-gray-200'>Loading...</div>;
   if (!Array.isArray(products)) {
     return <div className='text-lg text-center text-white'>Error loading products. Please try again later.</div>;
   }

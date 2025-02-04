@@ -38,9 +38,10 @@ const App = () => {
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/contactus' element={<Contact/>} />
           <Route path='/wishlist' element={<Wishlist/>} />
-          <Route element={<PrivateRoute/>}>
-            <Route path='/cart' element={<Cart/>}/>
-          </Route>
+          <Route path='/cart' element={<Cart/>}/>
+          {/* <Route element={<PrivateRoute/>}>
+            
+          </Route> */}
           
         </Routes>
         <Footer />

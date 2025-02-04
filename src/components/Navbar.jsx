@@ -74,7 +74,6 @@ const Navbar = () => {
 
         {/* Icon Section - Always Visible */}
         <div className="flex items-center gap-2 md:gap-4 mr-5">
-          <MagnifyingGlassIcon className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer" />
           {user ? (
             <ArrowRightOnRectangleIcon
               className="h-6 w-6 md:h-7 md:w-7 text-gray-100 hover:text-yellow-600 cursor-pointer"
